@@ -1,0 +1,41 @@
+.btn-not-active {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--light-gray);
+  background-color: transparent;
+}
+
+.btn-not-active:hover {
+  filter: brightness(0.9);
+}
+
+.btn-not-active > div {
+  width: 10%;
+}
+
+.btn-not-active h3 {
+  color: var(--marine-blue);
+}
+
+.btn-active {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--purplish-blue);
+  background-color: var(--magnolia);
+}
+
+.btn-active > div {
+  width: 10%;
+}
+
+
+.btn-active h3 {
+  color: var(--marine-blue);
+}
+

@@ -1,0 +1,22 @@
+.buttons {
+  width: 100vw;
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+  padding: 2rem;
+  background-image: url("../images/bg-sidebar-mobile.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.buttons button {
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}

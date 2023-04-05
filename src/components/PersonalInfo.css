@@ -1,0 +1,51 @@
+.personal-info {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--cool-gray);
+  padding: 2rem 1.5rem;
+}
+
+.personal-info p {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 80%;
+  line-height: 1.5rem;
+}
+
+.personal-info input:focus {
+  outline: 0;
+}
+
+.personal-info .not-active {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid var(--cool-gray);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.personal-info .active {
+  border: 1px solid var(--purplish-blue);
+  background-color: var(--magnolia);
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 0.3rem;
+}
+
+.personal-info input::placeholder {
+  color: var(--cool-gray);
+}
+
+.personal-info label {
+  color: var(--marine-blue);
+  font-size: 0.9rem;
+}
+
+.personal-info h1 {
+  font-size: 1.3rem;
+  color: var(--marine-blue);
+}

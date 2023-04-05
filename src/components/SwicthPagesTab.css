@@ -1,0 +1,32 @@
+.container {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+}
+
+.go-back-btn {
+  background: transparent;
+  border: none;
+  font-weight: 500;
+  color: var(--cool-gray);
+}
+
+.go-back-hidden {
+  visibility: hidden;
+}
+
+.next-step-btn {
+  background-color: var(--marine-blue);
+  padding: 0.75rem;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 0.2rem;
+}
