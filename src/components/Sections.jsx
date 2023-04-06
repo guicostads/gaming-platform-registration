@@ -2,7 +2,6 @@ import React from "react";
 import "./Sections.css";
 import { Link } from "react-router-dom";
 
-
 const Sections = () => {
   return (
     <div>

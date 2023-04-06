@@ -17,7 +17,7 @@ export const SwitchPagesTab = () => {
         }
         onClick={handlePrevClick}
       >
-        Go back
+        Go Back
       </button>
 
       {path !== "/page4" && (

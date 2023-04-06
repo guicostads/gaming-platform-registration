@@ -1,9 +1,9 @@
-import "./Button.css";
+import "./PlanButton.css";
 import { useContext } from "react";
 import { PageContext } from "../context/context";
 
-export const Button = ({ img, plan, price, id }) => {
-  const { handleActive, active } = useContext(PageContext);
+export const PlanButton = ({ img, plan, price, id }) => {
+  const { handleActive, active, toggleValue } = useContext(PageContext);
 
   return (
     <div>
@@ -13,9 +13,10 @@ export const Button = ({ img, plan, price, id }) => {
         onClick={handleActive}
       >
         <img src={img}></img>
-        <div onClick={handleActive}>
+        <div onClick={handleActive} className="descriptions">
           <h3>{plan}</h3>
-          {price}
+          <span>{price}</span>
+          {toggleValue && <span>2 months free</span>}
         </div>
       </button>
     </div>

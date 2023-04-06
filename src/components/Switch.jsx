@@ -7,12 +7,12 @@ export const Switch = () => {
 
   return (
     <div className="switch-box">
-      <span>Yearly</span>
+      <span className={!toggleValue ? "active-txt-color" : ""}>Monthly</span>
       <label className="switch">
         <input type="checkbox" checked={toggleValue} onChange={handleToggle} />
         <span className="slider round"></span>
       </label>
-      <span>monthly</span>
+      <span className={toggleValue ? "active-txt-color" : ""}>Yearly</span>
     </div>
   );
 };

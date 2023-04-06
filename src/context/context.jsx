@@ -39,6 +39,7 @@ export const PageContextProvider = ({ children }) => {
 
   const handleToggle = () => {
     setToggleValue(!toggleValue);
+    setActive(!active);
   };
 
   const handlePrevClick = () => {
