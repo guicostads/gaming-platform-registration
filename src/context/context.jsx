@@ -7,21 +7,18 @@ export const PageContextProvider = ({ children }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [active, setActive] = useState(null);
-  const [selected, setSelected] = useState("");
+  //const [selected, setSelected] = useState("");
   const [toggleValue, setToggleValue] = useState(false);
+  const [isChecked, setIsChecked] = useState(null);
   const [currentPathIndex, setCurrentPathIndex] = useState(0);
   const navigate = useNavigate();
   const paths = ["/page1", "/page2", "/page3", "/page4"];
 
-  const handleSelected = (e) => {
-    setSelected(e.target.value);
-    handleActive();
-    console.log(selected);
-  };
-
-  const handleActive = (e) => {
-    setActive(e.target.id);
-  };
+  //const handleSelected = (e) => {
+  // setSelected(e.target.value);
+  //handleActive();
+  // console.log(selected);
+  //};
 
   const handleSetName = (e) => {
     setName(e.target.value);
@@ -37,10 +34,18 @@ export const PageContextProvider = ({ children }) => {
     console.log(phone);
   };
 
+  const handleActive = (e) => {
+    setActive(e.target.id);
+  };
+
   const handleToggle = () => {
     setToggleValue(!toggleValue);
     setActive(!active);
   };
+
+  const handleChange = () => {
+    setIsChecked(!isChecked)
+  }
 
   const handlePrevClick = () => {
     const prevIndex = (currentPathIndex - 1) % paths.length;
@@ -58,6 +63,8 @@ export const PageContextProvider = ({ children }) => {
   return (
     <PageContext.Provider
       value={{
+        isChecked,
+        handleChange,
         handleActive,
         active,
         toggleValue,
@@ -65,7 +72,7 @@ export const PageContextProvider = ({ children }) => {
         currentPathIndex,
         handlePrevClick,
         handleNextClick,
-        handleSelected,
+        //handleSelected,
         handleSetEmail,
         handleSetName,
         handleSetPhone,

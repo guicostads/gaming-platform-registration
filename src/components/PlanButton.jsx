@@ -16,7 +16,11 @@ export const PlanButton = ({ img, plan, price, id }) => {
         <div onClick={handleActive} className="descriptions">
           <h3>{plan}</h3>
           <span>{price}</span>
-          {toggleValue && <span>2 months free</span>}
+          {toggleValue && (
+            <span style={{ color: "var(--marine-blue)", fontSize: ".80rem" }}>
+              2 months free
+            </span>
+          )}
         </div>
       </button>
     </div>

@@ -12,20 +12,26 @@ const PlanSelection = () => {
 
   return (
     <div className="plan-selection">
-      {!toggleValue && (
-        <div className="plan-selection">
-          <PlanButton id="1" plan="Arcade" price="9/mo" img={Arcade} />
-          <PlanButton id="2" plan="Advanced" price="12/mo" img={Advanced} />
-          <PlanButton id="3" plan="Arcade" price="15/mo" img={Pro} />
-        </div>
-      )}
-      {toggleValue && (
-        <div className="plan-selection">
-          <PlanButton id="1" plan="Arcade" price="90/yr" img={Arcade} />
-          <PlanButton id="2" plan="Advanced" price="120/yr" img={Advanced} />
-          <PlanButton id="3" plan="Arcade" price="150/yr" img={Pro} />
-        </div>
-      )}
+      <div className="plan-selection">
+        <PlanButton
+          id="1"
+          plan="Arcade"
+          price={toggleValue ? "90/yr" : "9/mo"}
+          img={Arcade}
+        />
+        <PlanButton
+          id="2"
+          plan="Advanced"
+          price={toggleValue ? "120/yr" : "12/mo"}
+          img={Advanced}
+        />
+        <PlanButton
+          id="3"
+          plan="Pro"
+          price={toggleValue ? "150/yr" : "15/mo"}
+          img={Pro}
+        />
+      </div>
       <Switch />
     </div>
   );

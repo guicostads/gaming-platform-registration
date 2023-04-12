@@ -1,3 +1,47 @@
-.addon-btn {
-    
+.not-checked {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--light-gray);
+  background-color: transparent;
+}
+
+.checked {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--marine-blue);
+  background-color: var(--magnolia);
+}
+
+.not-checked div,
+.checked div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.not-checked h3,
+.not-checked span,
+.checked h3,
+.checked span {
+  color: var(--marine-blue);
+}
+
+.not-checked span,
+.checked span {
+  font-size: 0.8rem;
+}
+
+.not-checked div > span,
+.checked div > span {
+  color: var(--cool-gray);
+  font-size: 100%;
 }
