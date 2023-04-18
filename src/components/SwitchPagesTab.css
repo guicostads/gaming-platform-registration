@@ -15,6 +15,7 @@
   border: none;
   font-weight: 500;
   color: var(--cool-gray);
+  width: auto;
 }
 
 .go-back-hidden {
@@ -24,6 +25,20 @@
 .next-step-btn {
   background-color: var(--marine-blue);
   padding: 0.75rem;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 0.2rem;
+}
+
+.next-step-btn:hover, .confirm-btn:hover {
+  filter: brightness(0.9);
+}
+
+.confirm-btn {
+  background-color: var(--purplish-blue);
+  padding: 0.75rem 1.1rem;
   border: none;
   color: #fff;
   font-weight: 500;

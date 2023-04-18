@@ -1,5 +1,7 @@
 const Finish = () => {
-  return <div>Finish</div>;
+  return <div>
+    
+  </div>;
 };
 
 export default Finish;

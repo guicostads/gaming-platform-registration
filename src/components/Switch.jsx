@@ -1,4 +1,6 @@
-import React, { useContext, useState } from "react";
+//toggle switch inside the plan selection
+
+import React, { useContext } from "react";
 import "./Switch.css";
 import { PageContext } from "../context/context";
 

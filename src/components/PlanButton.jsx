@@ -1,3 +1,5 @@
+//button with the available plans
+
 import "./PlanButton.css";
 import { useContext } from "react";
 import { PageContext } from "../context/context";
@@ -12,8 +14,8 @@ export const PlanButton = ({ img, plan, price, id }) => {
         id={id}
         onClick={handleActive}
       >
-        <img src={img}></img>
-        <div onClick={handleActive} className="descriptions">
+        <img src={img} id={id} onClick={handleActive}></img>
+        <div id={id} className="descriptions" onClick={handleActive}>
           <h3>{plan}</h3>
           <span>{price}</span>
           {toggleValue && (

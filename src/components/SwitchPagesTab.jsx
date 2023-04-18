@@ -1,11 +1,12 @@
-import { useLocation } from "react-router-dom";
+//footer buttons for navigation
+
 import { useContext } from "react";
 import { PageContext } from "../context/context";
-import "./SwicthPagesTab.css";
+import "./SwitchPagesTab.css";
 
 export const SwitchPagesTab = () => {
-  const page = useLocation();
-  const path = page.pathname;
+  const { path } = useContext(PageContext);
+
   const { handlePrevClick, handleNextClick } = useContext(PageContext);
 
   return (
@@ -13,20 +14,27 @@ export const SwitchPagesTab = () => {
       <button
         type="button"
         className={
-          path === "/page1" || path === "/" ? "go-back-hidden" : "go-back-btn"
+          path === "/personalinfo" || path === "/"
+            ? "go-back-hidden"
+            : "go-back-btn"
         }
         onClick={handlePrevClick}
       >
         Go Back
       </button>
 
-      {path !== "/page4" && (
+      {path !== "/finish" && (
         <button
           type="button"
           className="next-step-btn"
           onClick={handleNextClick}
         >
           Next step
+        </button>
+      )}
+      {path === "/finish" && (
+        <button type="button" className="confirm-btn">
+          Confirm
         </button>
       )}
     </footer>

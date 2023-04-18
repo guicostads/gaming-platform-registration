@@ -1,10 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AddOnButton } from "./AddOnButton";
 import { PageContext } from "../context/context";
 import "./AddOns.css";
 
 const AddOns = () => {
-  const { toggleValue} = useContext(PageContext);
+  const {
+    toggleValue,
+    isChecked1,
+    isChecked2,
+    isChecked3,
+    handleChange1,
+    handleChange2,
+    handleChange3,
+  } = useContext(PageContext);
 
   return (
     <div className="addon-box">
@@ -14,19 +22,25 @@ const AddOns = () => {
         bonus="Online Service"
         description="Access to multiplayer games"
         price={toggleValue ? "+10/yr" : "+1/mo"}
-        id='online'
+        value={toggleValue ? 10 : 1}
+        isChecked={isChecked1}
+        onChange={handleChange1}
       />
       <AddOnButton
         bonus="Larger Storage"
         description="Extra 1T of cloud save"
         price={toggleValue ? "+20/yr" : "+2/mo"}
-        id='storage'
+        value={toggleValue ? 20 : 2}
+        isChecked={isChecked2}
+        onChange={handleChange2}
       />
       <AddOnButton
         bonus="Customizable Profile"
         description="Custom theme on your profile"
         price={toggleValue ? "+20/yr" : "+2/mo"}
-        id='customizable'
+        value={toggleValue ? 20 : 2}
+        isChecked={isChecked3}
+        onChange={handleChange3}
       />
     </div>
   );

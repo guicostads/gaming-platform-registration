@@ -16,7 +16,7 @@
   gap: 0.7rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--marine-blue);
+  border: 1px solid var(--purplish-blue);
   background-color: var(--magnolia);
 }
 
@@ -38,6 +38,7 @@
 .not-checked span,
 .checked span {
   font-size: 0.8rem;
+  color: var(--purplish-blue);
 }
 
 .not-checked div > span,

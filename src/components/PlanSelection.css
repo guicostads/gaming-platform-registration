@@ -4,7 +4,6 @@
   flex-direction: column;
   gap: 0.5rem;
   color: var(--cool-gray);
-  padding: 2rem 1rem;
 }
 
 .plan-selection p {
@@ -25,6 +24,9 @@
   gap: 1rem;
   margin-top: 1rem;
 }
+
+
+
 .not-active-btn {
   border: 1px solid var(--light-gray);
   background-color: transparent;
@@ -37,17 +39,4 @@
 .active-btn {
   border: 2px solid var(--marine-blue);
   background-color: var(--light-blue);
-}
-
-.plan-content button:hover {
-  filter: brightness(0.7);
-}
-
-.plan-content button div {
-  width: 10%;
-  font-size: 0.9rem;
-}
-
-.plan-content button div h3 {
-  color: var(--marine-blue);
 }

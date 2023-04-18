@@ -12,24 +12,29 @@ const PlanSelection = () => {
 
   return (
     <div className="plan-selection">
-      <div className="plan-selection">
+      <h1>Select your plan</h1>
+      <p>You have the option of monthly or yearly billing</p>
+      <div className="plan-content">
         <PlanButton
-          id="1"
+          id="Arcade"
           plan="Arcade"
-          price={toggleValue ? "90/yr" : "9/mo"}
+          price={toggleValue ? `90/yr` : "9/mo"}
           img={Arcade}
+          value={toggleValue ? 90 : 9}
         />
         <PlanButton
-          id="2"
+          id="Advanced"
           plan="Advanced"
           price={toggleValue ? "120/yr" : "12/mo"}
           img={Advanced}
+          value={toggleValue ? 120 : 12}
         />
         <PlanButton
-          id="3"
+          id="Pro"
           plan="Pro"
           price={toggleValue ? "150/yr" : "15/mo"}
           img={Pro}
+          value={toggleValue ? 150 : 15}
         />
       </div>
       <Switch />

@@ -3,10 +3,11 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  margin-top: 0.5rem;
   gap: 0.5rem;
   padding: 0.5rem 0;
   background-color: var(--magnolia);
-  width: 90%;
+  width: 100%;
   border-radius: 0.5rem;
   font-weight: 500;
 }
