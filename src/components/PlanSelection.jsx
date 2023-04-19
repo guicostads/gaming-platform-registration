@@ -18,7 +18,7 @@ const PlanSelection = () => {
         <PlanButton
           id="Arcade"
           plan="Arcade"
-          price={toggleValue ? `90/yr` : "9/mo"}
+          price={toggleValue ? "90/yr" : "9/mo"}
           img={Arcade}
           value={toggleValue ? 90 : 9}
         />

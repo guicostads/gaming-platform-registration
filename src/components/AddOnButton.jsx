@@ -7,10 +7,11 @@ export const AddOnButton = ({
   price,
   isChecked,
   onChange,
+  value,
 }) => {
   return (
     <button className={isChecked ? "checked" : "not-checked"}>
-      <input type="checkbox" onChange={onChange} checked={isChecked} />
+      <input type="checkbox" onChange={onChange} checked={isChecked} value={value}/>
       <div>
         <h3> {bonus} </h3>
         <span>{description}</span>

@@ -9,24 +9,17 @@ export const PageContextProvider = ({ children }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [active, setActive] = useState(null);
-  //const [selected, setSelected] = useState("");
+  const [activePlan, setActivePlan] = useState("");
   const [toggleValue, setToggleValue] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
   const [isChecked1, setIsChecked1] = useState(false);
   const [isChecked2, setIsChecked2] = useState(false);
   const [isChecked3, setIsChecked3] = useState(false);
-  const [totalValue, setTotalValue] = useState([]);
+  const [totalValue, setTotalValue] = useState(null);
   const [currentPathIndex, setCurrentPathIndex] = useState(0);
   const page = useLocation();
   const path = page.pathname;
   const navigate = useNavigate();
   const paths = ["/personalinfo", "/plans", "/addons", "/finish"];
-
-  //const handleSelected = (e) => {
-  // setSelected(e.target.value);
-  //handleActive();
-  // console.log(selected);
-  //};
 
   const handleSetName = (e) => {
     setName(e.target.value);
@@ -42,49 +35,53 @@ export const PageContextProvider = ({ children }) => {
     console.log(phone);
   };
 
-  const handleActive = (e) => {
+  const handleActivePlan = (e) => {
     setActive(e.target.id);
+    setActivePlan(e.target.id);
+    setTotalValue(Number(e.target.value));
+    setIsChecked1(false);
+    setIsChecked2(false);
+    setIsChecked3(false);
   };
 
-  const handleToggle = (e) => {
+  //control the toggle switch state
+  const handleToggle = () => {
     setToggleValue(!toggleValue);
     setActive(!active);
-    active
-      ? setTotalValue([...totalValue, e.target.value])
-      : setTotalValue([totalValue]);
+    setTotalValue(null);
+    setActivePlan(null);
+    setIsChecked1(false);
+    setIsChecked2(false);
+    setIsChecked3(false);
   };
 
-  const totalSum = () =>
-    totalValue.reduce((acc, curr) => {
-      return acc + curr;
-    }, 0);
-
-  const handleChange = (e) => {
-    setIsChecked(!isChecked);
-    isChecked
-      ? setTotalValue([...totalValue, e.target.value])
-      : setTotalValue([totalValue]);
-  };
-
-  const handleChange1 = () => {
+  //control addon btn 1 state
+  const handleChange1 = (e) => {
     setIsChecked1(!isChecked1);
-    isChecked
-      ? setTotalValue([...totalValue, e.target.value])
-      : setTotalValue([...totalValue]);
+    if (!isChecked1) {
+      setTotalValue(Number(totalValue) + Number(e.target.value));
+    } else {
+      setTotalValue(Number(totalValue) - Number(e.target.value));
+    }
   };
 
-  const handleChange2 = () => {
+  //control addon btn 1 state
+  const handleChange2 = (e) => {
     setIsChecked2(!isChecked2);
-    isChecked
-      ? setTotalValue([...totalValue, e.target.value])
-      : setTotalValue([...totalValue]);
+    if (!isChecked2) {
+      setTotalValue(Number(totalValue) + Number(e.target.value));
+    } else {
+      setTotalValue(Number(totalValue) - Number(e.target.value));
+    }
   };
-
-  const handleChange3 = () => {
+  //control addon btn 1 state
+  const handleChange3 = (e) => {
     setIsChecked3(!isChecked3);
-    isChecked
-      ? setTotalValue([...totalValue, e.target.value])
-      : setTotalValue([...totalValue]);
+    if (!isChecked3) {
+      setTotalValue(Number(totalValue) + Number(e.target.value));
+    } else {
+      setTotalValue(Number(totalValue) - Number(e.target.value));
+    }
   };
 
   const handlePrevClick = () => {
@@ -103,16 +100,16 @@ export const PageContextProvider = ({ children }) => {
   return (
     <PageContext.Provider
       value={{
-        //handleSelected,
-        isChecked,
+        activePlan,
+        //totalSum,
+        totalValue,
         isChecked1,
         isChecked2,
         isChecked3,
         handleChange1,
         handleChange2,
         handleChange3,
-        handleChange,
-        handleActive,
+        handleActivePlan,
         active,
         path,
         page,
