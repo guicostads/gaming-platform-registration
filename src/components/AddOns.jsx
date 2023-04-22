@@ -19,7 +19,7 @@ const AddOns = () => {
       <h1>Pick Add-Ons</h1>
       <p>Add-ons help enhance your gaming experience.</p>
       <AddOnButton
-        bonus="Online Service"
+        id="Online Service"
         description="Access to multiplayer games"
         price={toggleValue ? "+10/yr" : "+1/mo"}
         value={toggleValue ? 10 : 1}
@@ -27,7 +27,7 @@ const AddOns = () => {
         onChange={handleChange1}
       />
       <AddOnButton
-        bonus="Larger Storage"
+        id="Larger Storage"
         description="Extra 1T of cloud save"
         price={toggleValue ? "+20/yr" : "+2/mo"}
         value={toggleValue ? 20 : 2}
@@ -35,7 +35,7 @@ const AddOns = () => {
         onChange={handleChange2}
       />
       <AddOnButton
-        bonus="Customizable Profile"
+        id="Customizable Profile"
         description="Custom theme on your profile"
         price={toggleValue ? "+20/yr" : "+2/mo"}
         value={toggleValue ? 20 : 2}

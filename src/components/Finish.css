@@ -1,0 +1,40 @@
+.finish {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.finish h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--marine-blue);
+}
+
+.finish > p {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 90%;
+  color: var(--cool-gray);
+}
+
+.finish-items {
+  margin-top: 0.75rem;
+  background-color: var(--magnolia);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+a,
+a:active {
+  color: var(--cool-gray);
+}
