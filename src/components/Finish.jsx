@@ -17,6 +17,19 @@ const Finish = () => {
     setActivePlan,
   } = useContext(PageContext);
 
+  const marineBlue = {
+    color: "var(--marine-blue)",
+  };
+
+  const purplishBlue = {
+    color: "var(--purplish-blue)",
+    fontWeight: "400",
+  };
+
+  const coolGray = {
+    color: "var(--cool-gray)",
+  };
+
   return (
     <div className="finish">
       <h1>Finishing up</h1>
@@ -24,10 +37,10 @@ const Finish = () => {
       {activePlan && (
         <div className="finish-items">
           <div className="row">
-            <span>
-              {activePlan} {toggleValue ? "(yearly)" : "(monthly)"}
+            <span style={marineBlue}>
+              {activePlan} {toggleValue ? "(Yearly)" : "(Monthly)"}
             </span>
-            <span>
+            <span style={marineBlue}>
               ${planPrice}
               {toggleValue ? "/yr" : "/mo"}
             </span>
@@ -38,27 +51,37 @@ const Finish = () => {
           {isChecked1 && (
             <div className="row">
               <span>Online Service</span>
-              {toggleValue ? "+10/yr" : "+1/mo"}
+              <span style={purplishBlue}>
+                {toggleValue ? "+10/yr" : "+1/mo"}
+              </span>
             </div>
           )}
           {isChecked2 && (
             <div className="row">
               <span>Larger Storage</span>
-              {toggleValue ? "+20/yr" : "+2/mo"}
+              <span style={purplishBlue}>
+                {toggleValue ? "+20/yr" : "+2/mo"}
+              </span>
             </div>
           )}
           {isChecked3 && (
             <div className="row">
               <span>Customizable profile</span>
-              {toggleValue ? "+20/yr" : "+2/mo"}
+              <span style={purplishBlue}>
+                {toggleValue ? "+20/yr" : "+2/mo"}
+              </span>
             </div>
           )}
         </div>
       )}
       {activePlan && (
-        <div className="row" style={{padding: '.75rem'}}>
-          <span>Total{toggleValue ? " (per year)" : " (per month)"}</span>$
-          {totalPrice}/{toggleValue ? "yr" : "mo"}
+        <div className="row" style={{ padding: ".75rem" }}>
+          <span style={coolGray}>
+            Total{toggleValue ? " (per year)" : " (per month)"}
+          </span>
+          <span style={purplishBlue}>
+            ${totalPrice}/{toggleValue ? "yr" : "mo"}
+          </span>
         </div>
       )}
     </div>

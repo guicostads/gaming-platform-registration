@@ -3,8 +3,8 @@ import Sections from "../components/Sections";
 import { SwitchPagesTab } from "../components/SwitchPagesTab";
 import { PageContextProvider } from "../context/context";
 import { useLocation } from "react-router-dom";
-import "./Default.css";
 import PersonalInfo from "../components/PersonalInfo";
+import "./Default.css";
 
 export const Default = () => {
   const location = useLocation();

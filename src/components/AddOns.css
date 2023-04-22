@@ -11,6 +11,7 @@
 
 .addon-box p {
   color: var(--cool-gray);
+  font-weight: 500;
 }
 
 .addon-box button:hover {

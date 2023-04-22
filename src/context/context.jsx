@@ -17,8 +17,8 @@ export const PageContextProvider = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(null);
   const [currentPathIndex, setCurrentPathIndex] = useState(0);
   const page = useLocation();
-  const path = page.pathname;
   const navigate = useNavigate();
+  const path = page.pathname;
   const paths = ["/personalinfo", "/plans", "/addons", "/finish"];
 
   const handleSetName = (e) => {

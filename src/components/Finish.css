@@ -12,7 +12,7 @@
 
 .finish > p {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   width: 90%;
   color: var(--cool-gray);
 }
@@ -27,6 +27,11 @@
   padding: 0.75rem;
   font-size: 0.9rem;
   width: 100%;
+}
+
+.finish-items span {
+    color: var(--cool-gray);
+    font-weight: 500;
 }
 
 .row {
