@@ -19,15 +19,17 @@ const Finish = () => {
 
   const marineBlue = {
     color: "var(--marine-blue)",
+    fontWeight: '500'
   };
 
   const purplishBlue = {
     color: "var(--purplish-blue)",
-    fontWeight: "400",
+    fontWeight: "500",
   };
 
   const coolGray = {
     color: "var(--cool-gray)",
+    fontWeight: '400'
   };
 
   return (
@@ -50,7 +52,7 @@ const Finish = () => {
           </Link>
           {isChecked1 && (
             <div className="row">
-              <span>Online Service</span>
+              <span style={coolGray}>Online Service</span>
               <span style={purplishBlue}>
                 {toggleValue ? "+10/yr" : "+1/mo"}
               </span>
@@ -58,7 +60,7 @@ const Finish = () => {
           )}
           {isChecked2 && (
             <div className="row">
-              <span>Larger Storage</span>
+              <span style={coolGray}>Larger Storage</span>
               <span style={purplishBlue}>
                 {toggleValue ? "+20/yr" : "+2/mo"}
               </span>
@@ -66,7 +68,7 @@ const Finish = () => {
           )}
           {isChecked3 && (
             <div className="row">
-              <span>Customizable profile</span>
+              <span style={coolGray}>Customizable profile</span>
               <span style={purplishBlue}>
                 {toggleValue ? "+20/yr" : "+2/mo"}
               </span>

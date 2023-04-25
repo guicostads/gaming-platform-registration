@@ -9,7 +9,6 @@
 .plan-selection p {
   font-size: 1rem;
   font-weight: 500;
-  width: 100%;
   line-height: 1.5rem;
 }
 
@@ -36,4 +35,22 @@
 .active-btn {
   border: 2px solid var(--marine-blue);
   background-color: var(--light-blue);
+}
+
+@media (min-width: 769px) {
+  .plan-content div {
+    font-size: 1.1rem;
+  }
+
+  .plan-content img {
+    width: 3rem;
+  }
+
+  .plan-selection h1 {
+    font-size: 1.4rem;
+  }
+
+  .plan-selection p {
+    font-size: 1.1rem;
+  }
 }

@@ -13,7 +13,6 @@
 .finish > p {
   font-size: 1rem;
   font-weight: 500;
-  width: 90%;
   color: var(--cool-gray);
 }
 
@@ -30,8 +29,8 @@
 }
 
 .finish-items span {
-    color: var(--cool-gray);
-    font-weight: 500;
+  color: var(--cool-gray);
+  font-weight: 500;
 }
 
 .row {
@@ -42,4 +41,6 @@
 a,
 a:active {
   color: var(--cool-gray);
+  text-decoration: underline 0.1rem solid var(--cool-gray);
 }
+

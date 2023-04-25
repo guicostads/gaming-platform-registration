@@ -9,6 +9,7 @@ export const PageContextProvider = ({ children }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [planPrice, setPlanPrice] = useState("");
+  const [activeInfo, setActiveInfo] = useState("");
   const [activePlan, setActivePlan] = useState(null);
   const [toggleValue, setToggleValue] = useState(false);
   const [isChecked1, setIsChecked1] = useState(false);
@@ -33,6 +34,10 @@ export const PageContextProvider = ({ children }) => {
   const handleSetPhone = (e) => {
     setPhone(e.target.value);
     console.log(phone);
+  };
+
+  const handleActiveInfo = (e) => {
+    setActiveInfo(e.target.id);
   };
 
   //control the slected plan
@@ -75,6 +80,7 @@ export const PageContextProvider = ({ children }) => {
       setTotalPrice(Number(totalPrice) - Number(e.target.value));
     }
   };
+
   //control addon btn 1 state
   const handleChange3 = (e) => {
     setIsChecked3(!isChecked3);
@@ -114,6 +120,8 @@ export const PageContextProvider = ({ children }) => {
         handleActivePlan,
         setActivePlan,
         activePlan,
+        activeInfo,
+        handleActiveInfo,
         path,
         page,
         planPrice,

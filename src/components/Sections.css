@@ -20,3 +20,15 @@
   color: #fff;
   cursor: pointer;
 }
+
+@media (min-width: 769px) {
+.buttons {
+  gap: 3rem;
+}
+
+  .buttons button {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.3rem;
+  }
+}

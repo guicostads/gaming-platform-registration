@@ -26,3 +26,18 @@
   width: 1.3rem;
   height: 1.3rem;
 }
+
+@media (min-width:769px) {
+  .addon-box h1 {
+    font-size: 1.4rem;
+  }
+
+  .addon-box p {
+    font-size: 1.1rem;
+  }
+
+  .addon-box button {
+    font-size: 1rem;
+  }
+}
+

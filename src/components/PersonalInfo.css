@@ -9,7 +9,6 @@
 .personal-info p {
   font-size: 1rem;
   font-weight: 500;
-  width: 90%;
 }
 
 .personal-info input:focus {
@@ -47,4 +46,28 @@
 .personal-info h1 {
   font-size: 1.3rem;
   color: var(--marine-blue);
+}
+
+@media (min-width: 769px) {
+  .personal-info h1 {
+    font-size: 1.4rem;
+  }
+
+  .personal-info p {
+    font-size: 1.1rem;
+  }
+
+  .personal-info input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .personal-info .not-active {
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+
+  .personal-info .active {
+    height: 3.5rem;
+    font-size: 1rem;
+  }
 }

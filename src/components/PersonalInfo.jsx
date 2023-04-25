@@ -7,8 +7,8 @@ const PersonalInfo = () => {
     handleSetEmail,
     handleSetName,
     handleSetPhone,
-    handleActive,
-    active,
+    activeInfo,
+    handleActiveInfo,
   } = useContext(PageContext);
 
   return (
@@ -24,8 +24,8 @@ const PersonalInfo = () => {
           type="text"
           placeholder="e.g Stephen King"
           onChange={handleSetName}
-          onClick={handleActive}
-          className={active === "name" ? "active" : "not-active"}
+          onClick={handleActiveInfo}
+          className={activeInfo === "name" ? "active" : "not-active"}
         ></input>
 
         <label htmlFor="email">Email Address</label>
@@ -34,8 +34,8 @@ const PersonalInfo = () => {
           id="email"
           placeholder="e.g stephenking@gmail.com"
           onChange={handleSetEmail}
-          onClick={handleActive}
-          className={active === "email" ? "active" : "not-active"}
+          onClick={handleActiveInfo}
+          className={activeInfo === "email" ? "active" : "not-active"}
         ></input>
 
         <label htmlFor="phone">Phone Number</label>
@@ -45,8 +45,8 @@ const PersonalInfo = () => {
           id="phone"
           placeholder="e.g (51) 99999-9999"
           onChange={handleSetPhone}
-          onClick={handleActive}
-          className={active === "phone" ? "active" : "not-active"}
+          onClick={handleActiveInfo}
+          className={activeInfo === "phone" ? "active" : "not-active"}
         ></input>
       </form>
     </div>
