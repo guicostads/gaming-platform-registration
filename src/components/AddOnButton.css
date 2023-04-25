@@ -46,3 +46,9 @@
   color: var(--cool-gray);
   font-size: 100%;
 }
+
+@media (min-width:769px) {
+  .checked, .not-checked {
+    height: 6rem;
+  }
+}

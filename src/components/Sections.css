@@ -21,6 +21,12 @@
   cursor: pointer;
 }
 
+.buttons .active-page {
+  background-color: var(--pastel-blue);
+  color: black;
+  border: none;
+}
+
 @media (min-width: 769px) {
 .buttons {
   gap: 3rem;

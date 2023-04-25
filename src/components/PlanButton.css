@@ -38,3 +38,10 @@
   color: var(--marine-blue);
 }
 
+@media (min-width: 769px) {
+  .btn-not-active, .btn-active {
+    height: 5.5rem;
+    padding: .8rem;
+  }
+}
+

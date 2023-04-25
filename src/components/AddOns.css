@@ -20,14 +20,13 @@
 
 .addon-box input:hover {
   cursor: pointer;
- 
 }
 .addon-box input {
   width: 1.3rem;
   height: 1.3rem;
 }
 
-@media (min-width:769px) {
+@media (min-width: 769px) {
   .addon-box h1 {
     font-size: 1.4rem;
   }
@@ -39,5 +38,15 @@
   .addon-box button {
     font-size: 1rem;
   }
+
+  .addon-box input {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
 }
 
+@media (min-width: 769px) {
+  .addon-box span:not(:first-of-type) {
+    font-size: 1rem;
+  }
+}

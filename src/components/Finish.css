@@ -44,3 +44,35 @@ a:active {
   text-decoration: underline 0.1rem solid var(--cool-gray);
 }
 
+ .select-plan {
+    display: grid;
+    place-items: center;
+    gap: .5rem;
+    color: var(--marine-blue);
+    margin-top: 9rem;
+}
+
+.finish .select-plan p {
+    font-size: 1.5rem;
+}
+.select-plan a {
+    text-decoration: underline 1px solid var(--marine-blue);
+    cursor: pointer;
+    color: var(--marine-blue);
+}
+
+
+
+@media (min-width: 769px) {
+  .finish h1 {
+    font-size: 1.4rem;
+  }
+
+  .finish p {
+    font-size: 1.1rem;
+  }
+
+  .finish-items {
+    font-size: 1.1rem;
+  }
+}

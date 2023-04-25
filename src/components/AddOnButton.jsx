@@ -9,6 +9,12 @@ export const AddOnButton = ({
   onChange,
   value,
 }) => {
+
+  const priceStyle = {
+    fontWeight: '500',
+    fontSize: '1rem'
+  }
+  
   return (
     <button className={isChecked ? "checked" : "not-checked"}>
       <input
@@ -21,7 +27,7 @@ export const AddOnButton = ({
         <h3> {id} </h3>
         <span>{description}</span>
       </div>
-      <span style={{ fontWeight: "500" }}>{price}</span>
+      <span style={{fontWeight: '600'}}>{price}</span>
     </button>
   );
 };

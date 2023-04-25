@@ -2,8 +2,8 @@
 
 import { useContext } from "react";
 import { PageContext } from "../context/context";
-import "./Finish.css";
 import { Link } from "react-router-dom";
+import "./Finish.css";
 
 const Finish = () => {
   const {
@@ -19,23 +19,30 @@ const Finish = () => {
 
   const marineBlue = {
     color: "var(--marine-blue)",
-    fontWeight: '500'
+    fontWeight: "500",
   };
 
   const purplishBlue = {
     color: "var(--purplish-blue)",
     fontWeight: "500",
+    fontSize: "1.3rem",
   };
 
   const coolGray = {
     color: "var(--cool-gray)",
-    fontWeight: '400'
+    fontWeight: "400",
   };
 
   return (
     <div className="finish">
       <h1>Finishing up</h1>
       <p>Double-check everything looks OK before confirming.</p>
+      {!activePlan && (
+        <div className="select-plan">
+          <p>Please, select your prefered plan and add-ons</p>
+          <Link to='/plans'>Go to Plan Selection</Link>
+        </div>
+      )}
       {activePlan && (
         <div className="finish-items">
           <div className="row">
@@ -53,25 +60,19 @@ const Finish = () => {
           {isChecked1 && (
             <div className="row">
               <span style={coolGray}>Online Service</span>
-              <span style={purplishBlue}>
-                {toggleValue ? "+10/yr" : "+1/mo"}
-              </span>
+              <span style={marineBlue}>{toggleValue ? "+10/yr" : "+1/mo"}</span>
             </div>
           )}
           {isChecked2 && (
             <div className="row">
               <span style={coolGray}>Larger Storage</span>
-              <span style={purplishBlue}>
-                {toggleValue ? "+20/yr" : "+2/mo"}
-              </span>
+              <span style={marineBlue}>{toggleValue ? "+20/yr" : "+2/mo"}</span>
             </div>
           )}
           {isChecked3 && (
             <div className="row">
               <span style={coolGray}>Customizable profile</span>
-              <span style={purplishBlue}>
-                {toggleValue ? "+20/yr" : "+2/mo"}
-              </span>
+              <span style={marineBlue}>{toggleValue ? "+20/yr" : "+2/mo"}</span>
             </div>
           )}
         </div>

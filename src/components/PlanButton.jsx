@@ -20,7 +20,7 @@ export const PlanButton = ({ img, plan, price, id, value }) => {
           <h3>{plan}</h3>
           <span>{price}</span>
           {toggleValue && (
-            <span style={{ color: "var(--marine-blue)", fontSize: ".80rem" }}>
+            <span style={{ color: "var(--marine-blue)", fontSize: ".9rem" }}>
               2 months free
             </span>
           )}
