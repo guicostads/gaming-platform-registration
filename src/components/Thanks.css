@@ -1,0 +1,28 @@
+.thanks {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+.thanks > div {
+  display: grid;
+  place-items: center;
+  background-color: var(--strawberry-red);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+}
+
+.thanks p {
+    color: var(--cool-gray);
+}
+
+.thanks img {
+  width: 2rem;
+}
+
+.thanks h1 {
+  color: var(--marine-blue);
+}

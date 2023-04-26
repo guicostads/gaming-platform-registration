@@ -6,13 +6,12 @@
 
 .finish h1 {
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--marine-blue);
 }
 
 .finish > p {
   font-size: 1rem;
-  font-weight: 500;
   color: var(--cool-gray);
 }
 
@@ -44,24 +43,23 @@ a:active {
   text-decoration: underline 0.1rem solid var(--cool-gray);
 }
 
- .select-plan {
-    display: grid;
-    place-items: center;
-    gap: .5rem;
-    color: var(--marine-blue);
-    margin-top: 9rem;
+.select-plan {
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  color: var(--marine-blue);
+  text-align: center;
+  padding: 1rem;
 }
 
 .finish .select-plan p {
-    font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .select-plan a {
-    text-decoration: underline 1px solid var(--marine-blue);
-    cursor: pointer;
-    color: var(--marine-blue);
+  text-decoration: underline 1px solid var(--marine-blue);
+  cursor: pointer;
+  color: var(--marine-blue);
 }
-
-
 
 @media (min-width: 769px) {
   .finish h1 {
@@ -74,5 +72,9 @@ a:active {
 
   .finish-items {
     font-size: 1.1rem;
+  }
+
+  .select-plan {
+    margin-top: 9rem;
   }
 }

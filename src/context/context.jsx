@@ -119,6 +119,9 @@ export const PageContextProvider = ({ children }) => {
         setEmail,
         setPhone,
         setName,
+        phone,
+        name,
+        email,
       }}
     >
       {children}

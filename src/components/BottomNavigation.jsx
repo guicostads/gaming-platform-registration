@@ -1,15 +1,15 @@
 //footer buttons for navigation
-
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { PageContext } from "../context/context";
 import "./BottomNavigation.css";
 
 export const BottomNavigation = () => {
-  const { path } = useContext(PageContext);
-  const { handlePrevClick, handleNextClick } = useContext(PageContext);
+  const { handlePrevClick, handleNextClick, path, activePlan } =
+    useContext(PageContext);
 
   return (
-    <footer className="container">
+    <footer className={path === "/thanks" ? "hidden" : "container"}>
       <button
         type="button"
         className={
@@ -31,10 +31,12 @@ export const BottomNavigation = () => {
           Next step
         </button>
       )}
-      {path === "/finish" && (
-        <button type="button" className="confirm-btn">
-          Confirm
-        </button>
+      {path === "/finish" && activePlan && (
+        <Link to="/thanks">
+          <button type="button" className="confirm-btn">
+            Confirm
+          </button>
+        </Link>
       )}
     </footer>
   );

@@ -4,6 +4,7 @@ import PersonalInfo from "../components/PersonalInfo";
 import AddOns from "../components/AddOns";
 import PlanSelection from "../components/PlanSelection";
 import Finish from "../components/Finish";
+import { Thanks } from "../components/Thanks";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
       { path: "/plans", element: <PlanSelection /> },
       { path: "/addons", element: <AddOns /> },
       { path: "/finish", element: <Finish /> },
+      { path: "/thanks", element: <Thanks /> },
     ],
   },
 ]);

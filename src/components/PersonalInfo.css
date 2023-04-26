@@ -8,17 +8,20 @@
 
 .personal-info p {
   font-size: 1rem;
-  font-weight: 500;
 }
 
 .personal-info input:focus {
   outline: 0;
 }
 
-.personal-info .not-active {
+.personal-info .active, .personal-info .not-active {
   padding: 0.75rem 1rem;
   font-weight: 500;
   font-size: 0.95rem;
+  border-radius: 0.3rem;
+}
+
+.personal-info .not-active {
   border: 1px solid var(--light-gray);
   border-radius: 0.3rem;
   cursor: pointer;
@@ -27,14 +30,19 @@
 .personal-info .active {
   border: 1px solid var(--purplish-blue);
   background-color: var(--magnolia);
-  padding: 0.75rem 1rem;
-  font-weight: 500;
-  font-size: 0.95rem;
-  border-radius: 0.3rem;
+ 
+}
+
+.personal-info input:hover {
+  border: 1px solid var(--purplish-blue)
 }
 
 .personal-info input::placeholder {
   color: var(--cool-gray);
+  font-weight: 400;
+}
+.personal-info input {
+  color: var(--marine-blue);
 }
 
 .personal-info label {

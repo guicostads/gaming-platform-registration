@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .container {
   background-color: #fff;
   width: 100%;
@@ -31,7 +35,8 @@
   border-radius: 0.2rem;
 }
 
-.next-step-btn:hover, .confirm-btn:hover {
+.next-step-btn:hover,
+.confirm-btn:hover {
   filter: brightness(0.9);
 }
 
@@ -46,7 +51,9 @@
 }
 
 @media (min-width: 769px) {
-  .go-back-btn,  .next-step-btn, .confirm-btn {
+  .go-back-btn,
+  .next-step-btn,
+  .confirm-btn {
     font-size: 1.2rem;
   }
 }

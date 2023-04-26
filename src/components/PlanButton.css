@@ -26,7 +26,7 @@
 }
 
 .btn-not-active:hover {
-  filter: brightness(0.9);
+  border: 1px solid var(--purplish-blue);
 }
 
 .btn-not-active h3 {

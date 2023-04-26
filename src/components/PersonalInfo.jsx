@@ -3,7 +3,7 @@ import { PageContext } from "../context/context";
 import "./PersonalInfo.css";
 
 const PersonalInfo = () => {
-  const { setName, setPhone, setEmail, activeInfo, handleActiveInfo } =
+  const { setName, setPhone, setEmail, phone, email, name, activeInfo, handleActiveInfo } =
     useContext(PageContext);
 
   return (
@@ -16,9 +16,10 @@ const PersonalInfo = () => {
         <input
           name="name"
           id="name"
+          value={name}
           type="text"
           placeholder="e.g Stephen King"
-          onChange={(e) => setName(e.target.id)}
+          onChange={(e) => setName(e.target.value)}
           onClick={handleActiveInfo}
           className={activeInfo === "name" ? "active" : "not-active"}
         ></input>
@@ -27,8 +28,9 @@ const PersonalInfo = () => {
         <input
           name="email"
           id="email"
+          value={email}
           placeholder="e.g stephenking@gmail.com"
-          onChange={(e) => setEmail(e.target.id)}
+          onChange={(e) => setEmail(e.target.value)}
           onClick={handleActiveInfo}
           className={activeInfo === "email" ? "active" : "not-active"}
         ></input>
@@ -36,10 +38,11 @@ const PersonalInfo = () => {
         <label htmlFor="phone">Phone Number</label>
         <input
           name="phone"
-          type="number"
+          type="tel"
           id="phone"
+          value={phone}
           placeholder="e.g (51) 99999-9999"
-          onChange={(e) => setPhone(e.target.id)}
+          onChange={(e) => setPhone(e.target.value)}
           onClick={handleActiveInfo}
           className={activeInfo === "phone" ? "active" : "not-active"}
         ></input>

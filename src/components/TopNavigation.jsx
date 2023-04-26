@@ -45,4 +45,4 @@ const TopNavigation = () => {
   );
 };
 
-export default Sections;
+export default TopNavigation;

@@ -1,21 +1,22 @@
-.not-checked {
+.not-checked, .checked {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 0.7rem;
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+.not-checked:hover, .checked:hover {
+  border: 1px solid var(--purplish-blue);
+}
+
+.not-checked {
   border: 1px solid var(--light-gray);
   background-color: transparent;
 }
 
 .checked {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
   border: 1px solid var(--purplish-blue);
   background-color: var(--magnolia);
 }
