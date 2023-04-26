@@ -3,7 +3,7 @@ import { Default } from "../Default/Default";
 import PersonalInfo from "../components/PersonalInfo";
 import AddOns from "../components/AddOns";
 import PlanSelection from "../components/PlanSelection";
-import Summary from "../components/Finish";
+import Finish from "../components/Finish";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
       { path: "/personalinfo", element: <PersonalInfo /> },
       { path: "/plans", element: <PlanSelection /> },
       { path: "/addons", element: <AddOns /> },
-      { path: "/finish", element: <Summary /> },
+      { path: "/finish", element: <Finish /> },
     ],
   },
 ]);

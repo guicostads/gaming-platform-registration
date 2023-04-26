@@ -49,6 +49,6 @@
 
 @media (min-width:769px) {
   .checked, .not-checked {
-    height: 6rem;
+    padding: 1rem;
   }
 }

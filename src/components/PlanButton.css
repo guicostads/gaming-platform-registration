@@ -1,13 +1,23 @@
+.btn-active,
 .btn-not-active {
   width: 100%;
   display: flex;
-  gap: 0.7rem;
+  gap: 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--light-gray);
-  background-color: transparent;
   text-align: left;
 }
+
+.btn-not-active {
+  border: 1px solid var(--light-gray);
+  background-color: transparent;
+}
+
+.btn-active {
+  border: 1px solid var(--purplish-blue);
+  background-color: var(--magnolia);
+}
+
 .descriptions {
   display: flex;
   flex-direction: column;
@@ -23,25 +33,13 @@
   color: var(--marine-blue);
 }
 
-.btn-active {
-  width: 100%;
-  display: flex;
-  gap: 0.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  text-align: left;
-  border: 1px solid var(--purplish-blue);
-  background-color: var(--magnolia);
-}
-
 .btn-active h3 {
   color: var(--marine-blue);
 }
 
 @media (min-width: 769px) {
-  .btn-not-active, .btn-active {
-    height: 5.5rem;
+  .btn-not-active,
+  .btn-active {
     padding: .8rem;
   }
 }
-

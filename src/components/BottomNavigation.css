@@ -45,4 +45,8 @@
   border-radius: 0.2rem;
 }
 
-
+@media (min-width: 769px) {
+  .go-back-btn,  .next-step-btn, .confirm-btn {
+    font-size: 1.2rem;
+  }
+}

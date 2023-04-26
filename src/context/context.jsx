@@ -22,20 +22,6 @@ export const PageContextProvider = ({ children }) => {
   const path = page.pathname;
   const paths = ["/personalinfo", "/plans", "/addons", "/finish"];
 
-  const handleSetName = (e) => {
-    setName(e.target.value);
-    console.log(name);
-  };
-  const handleSetEmail = (e) => {
-    setEmail(e.target.value);
-    console.log(email);
-  };
-
-  const handleSetPhone = (e) => {
-    setPhone(e.target.value);
-    console.log(phone);
-  };
-
   const handleActiveInfo = (e) => {
     setActiveInfo(e.target.id);
   };
@@ -130,9 +116,9 @@ export const PageContextProvider = ({ children }) => {
         currentPathIndex,
         handlePrevClick,
         handleNextClick,
-        handleSetEmail,
-        handleSetName,
-        handleSetPhone,
+        setEmail,
+        setPhone,
+        setName,
       }}
     >
       {children}

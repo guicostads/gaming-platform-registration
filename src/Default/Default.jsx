@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Sections from "../components/Sections";
-import { SwitchPagesTab } from "../components/SwitchPagesTab";
+import TopNavigation from "../components/TopNavigation";
+import { BottomNavigation } from "../components/BottomNavigation";
 import { PageContextProvider } from "../context/context";
 import { useLocation } from "react-router-dom";
 import PersonalInfo from "../components/PersonalInfo";
@@ -13,7 +13,7 @@ export const Default = () => {
   return (
     <PageContextProvider>
       <main className="layout">
-        <Sections />
+        <TopNavigation />
         {path === "/" && (
           <div className="content">
             <PersonalInfo />
@@ -22,7 +22,7 @@ export const Default = () => {
         <div className="content">
           <Outlet />
         </div>
-        <SwitchPagesTab />
+        <BottomNavigation />
       </main>
     </PageContextProvider>
   );

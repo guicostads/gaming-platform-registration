@@ -45,8 +45,4 @@
   }
 }
 
-@media (min-width: 769px) {
-  .addon-box span:not(:first-of-type) {
-    font-size: 1rem;
-  }
-}
+

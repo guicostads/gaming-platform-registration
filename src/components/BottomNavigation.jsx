@@ -2,11 +2,10 @@
 
 import { useContext } from "react";
 import { PageContext } from "../context/context";
-import "./SwitchPagesTab.css";
+import "./BottomNavigation.css";
 
-export const SwitchPagesTab = () => {
+export const BottomNavigation = () => {
   const { path } = useContext(PageContext);
-
   const { handlePrevClick, handleNextClick } = useContext(PageContext);
 
   return (
