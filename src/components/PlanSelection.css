@@ -40,6 +40,13 @@
   .plan-content div {
     font-size: 1rem;
   }
+  .plan-content {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
 
   .plan-selection p {
     font-size: 1.1rem;
@@ -48,11 +55,8 @@
   .plan-content img {
     width: 3rem;
   }
-  
 
   .plan-selection h1 {
     font-size: 1.4rem;
   }
-
-  
 }

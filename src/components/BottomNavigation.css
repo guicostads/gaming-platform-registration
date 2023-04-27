@@ -55,5 +55,6 @@
   .next-step-btn,
   .confirm-btn {
     font-size: 1.2rem;
+    padding: 1rem;
   }
 }

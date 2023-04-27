@@ -4,19 +4,21 @@
   gap: 1rem;
   margin: auto;
   text-align: center;
+
 }
 
 .thanks > div {
   display: grid;
   place-items: center;
   background-color: var(--strawberry-red);
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 9999px;
 }
 
 .thanks p {
-    color: var(--cool-gray);
+  color: var(--cool-gray);
+  font-size: 1.1rem;
 }
 
 .thanks img {
@@ -25,4 +27,15 @@
 
 .thanks h1 {
   color: var(--marine-blue);
+}
+
+@media (min-width: 769px) {
+  .thanks > div {
+    
+  }
+
+  .thanks p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 }
