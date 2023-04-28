@@ -21,6 +21,7 @@
 .descriptions {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.3rem;
   color: var(--cool-gray);
 }
@@ -40,9 +41,11 @@
 @media (min-width: 769px) {
   .btn-not-active,
   .btn-active {
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 2rem;
     width: 12rem;
-    height: 10rem;
+    height: 12rem;
+    padding: 2rem 1rem;
   }
 }

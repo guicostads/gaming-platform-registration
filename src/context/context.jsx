@@ -16,11 +16,8 @@ export const PageContextProvider = ({ children }) => {
   const [isChecked2, setIsChecked2] = useState(false);
   const [isChecked3, setIsChecked3] = useState(false);
   const [totalPrice, setTotalPrice] = useState(null);
-  const [currentPathIndex, setCurrentPathIndex] = useState(0);
   const page = useLocation();
-  const navigate = useNavigate();
   const path = page.pathname;
-  const paths = ["/personalinfo", "/plans", "/addons", "/finish"];
 
   const handleActiveInfo = (e) => {
     setActiveInfo(e.target.id);
@@ -77,20 +74,6 @@ export const PageContextProvider = ({ children }) => {
     }
   };
 
-  //previous page on 'go back' btn
-  const handlePrevClick = () => {
-    const prevIndex = (currentPathIndex - 1) % paths.length;
-    setCurrentPathIndex(prevIndex);
-    navigate(paths[prevIndex]);
-  };
-
-  //next page on 'next step' btn
-
-  const handleNextClick = () => {
-    const nextIndex = (currentPathIndex + 1) % paths.length;
-    setCurrentPathIndex(nextIndex);
-    navigate(paths[nextIndex]);
-  };
   //-------
 
   return (
@@ -113,9 +96,6 @@ export const PageContextProvider = ({ children }) => {
         planPrice,
         toggleValue,
         handleToggle,
-        currentPathIndex,
-        handlePrevClick,
-        handleNextClick,
         setEmail,
         setPhone,
         setName,

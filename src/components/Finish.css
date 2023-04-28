@@ -15,6 +15,15 @@
   color: var(--cool-gray);
 }
 
+.finish .select-plan p {
+    font-size: 1.3rem;
+  }
+  .select-plan a {
+    text-decoration: underline 1px solid var(--marine-blue);
+    cursor: pointer;
+    color: var(--marine-blue);
+  }
+
 .finish-items {
   margin-top: 0.75rem;
   background-color: var(--magnolia);
@@ -43,6 +52,11 @@ a:active {
   text-decoration: underline 0.1rem solid var(--cool-gray);
 }
 
+a:hover {
+    color: var(--purplish-blue);
+    text-decoration: underline 0.1rem solid var(--purplish-blue);
+}
+
 .select-plan {
   display: grid;
   place-items: center;
@@ -52,14 +66,7 @@ a:active {
   padding: 1rem;
 }
 
-.finish .select-plan p {
-  font-size: 1.3rem;
-}
-.select-plan a {
-  text-decoration: underline 1px solid var(--marine-blue);
-  cursor: pointer;
-  color: var(--marine-blue);
-}
+
 
 @media (min-width: 769px) {
   .finish h1 {

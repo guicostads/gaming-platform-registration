@@ -5,9 +5,6 @@
   justify-content: center;
   gap: 0.8rem;
   padding: 2rem;
-  background-image: url("../images/bg-sidebar-mobile.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .buttons button {

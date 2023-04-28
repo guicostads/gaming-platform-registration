@@ -14,7 +14,8 @@
   outline: 0;
 }
 
-.personal-info .active, .personal-info .not-active {
+.personal-info .active,
+.personal-info .not-active {
   padding: 0.75rem 1rem;
   font-weight: 500;
   font-size: 0.95rem;
@@ -30,11 +31,10 @@
 .personal-info .active {
   border: 1px solid var(--purplish-blue);
   background-color: var(--magnolia);
- 
 }
 
 .personal-info input:hover {
-  border: 1px solid var(--purplish-blue)
+  border: 1px solid var(--purplish-blue);
 }
 
 .personal-info input::placeholder {
@@ -54,6 +54,10 @@
 .personal-info h1 {
   font-size: 1.3rem;
   color: var(--marine-blue);
+}
+
+.error {
+  border: 1px solid red;
 }
 
 @media (min-width: 769px) {

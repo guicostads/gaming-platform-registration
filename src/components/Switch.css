@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   gap: 0.5rem;
   padding: 0.5rem 0;
   background-color: var(--magnolia);
@@ -54,6 +53,14 @@ input:checked + .slider:before {
 
 .active-txt-color {
   color: var(--marine-blue);
+}
+
+@media (min-width: 769px) {
+  .switch-box {
+    margin-top: 4rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
 }
 
 

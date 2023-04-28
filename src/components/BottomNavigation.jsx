@@ -1,12 +1,30 @@
 //footer buttons for navigation
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { PageContext } from "../context/context";
 import "./BottomNavigation.css";
 
 export const BottomNavigation = () => {
-  const { handlePrevClick, handleNextClick, path, activePlan } =
-    useContext(PageContext);
+  const { path, activePlan, name, phone, email } = useContext(PageContext);
+  const [currentPathIndex, setCurrentPathIndex] = useState(0);
+  const paths = ["/personalinfo", "/plans", "/addons", "/finish"];
+  const navigate = useNavigate();
+  const infos = [name, phone, ]
+
+  //previous page on 'go back' btn
+  const handlePrevClick = () => {
+    const prevIndex = (currentPathIndex - 1) % paths.length;
+    setCurrentPathIndex(prevIndex);
+    navigate(paths[prevIndex]);
+  };
+
+  //next page on 'next step' btn
+  const handleNextClick = () => {
+    const nextIndex = (currentPathIndex + 1) % paths.length;
+    setCurrentPathIndex(nextIndex);
+    navigate(paths[nextIndex]);
+  };
 
   return (
     <footer className={path === "/thanks" ? "hidden" : "container"}>

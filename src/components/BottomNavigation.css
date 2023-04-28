@@ -21,6 +21,10 @@
   width: auto;
 }
 
+.go-back-btn:hover {
+  color: var(--purplish-blue);
+}
+
 .go-back-hidden {
   visibility: hidden;
 }
@@ -35,19 +39,23 @@
   border-radius: 0.2rem;
 }
 
-.next-step-btn:hover,
-.confirm-btn:hover {
-  filter: brightness(0.9);
+
+.next-step-btn:hover {
+  background-color: var(--purplish-blue);
 }
 
 .confirm-btn {
   background-color: var(--purplish-blue);
-  padding: 0.75rem 1.1rem;
+  padding: 0.75rem ;
   border: none;
   color: #fff;
   font-weight: 500;
   font-size: 0.9rem;
   border-radius: 0.2rem;
+}
+
+.confirm-btn:hover {
+  background-color: var(--marine-blue);
 }
 
 @media (min-width: 769px) {

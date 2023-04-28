@@ -30,12 +30,11 @@
 }
 
 @media (min-width: 769px) {
-  .thanks > div {
-    
-  }
 
   .thanks p {
     font-size: 1.2rem;
     line-height: 1.5rem;
+    padding: 1rem;
+    width: 90%;
   }
 }
