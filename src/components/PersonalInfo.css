@@ -25,12 +25,10 @@
 .personal-info .not-active {
   border: 1px solid var(--light-gray);
   border-radius: 0.3rem;
-  cursor: pointer;
 }
 
 .personal-info .active {
   border: 1px solid var(--purplish-blue);
-  background-color: var(--magnolia);
 }
 
 .personal-info input:hover {
@@ -43,6 +41,11 @@
 }
 .personal-info input {
   color: var(--marine-blue);
+  cursor: pointer;
+}
+
+.persponal-info input:active {
+  border: 1px solid var(--marine-blue);
 }
 
 .personal-info label {

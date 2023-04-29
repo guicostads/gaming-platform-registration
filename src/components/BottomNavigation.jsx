@@ -10,7 +10,6 @@ export const BottomNavigation = () => {
   const [currentPathIndex, setCurrentPathIndex] = useState(0);
   const paths = ["/personalinfo", "/plans", "/addons", "/finish"];
   const navigate = useNavigate();
-  const infos = [name, phone, ]
 
   //previous page on 'go back' btn
   const handlePrevClick = () => {
@@ -21,9 +20,13 @@ export const BottomNavigation = () => {
 
   //next page on 'next step' btn
   const handleNextClick = () => {
-    const nextIndex = (currentPathIndex + 1) % paths.length;
-    setCurrentPathIndex(nextIndex);
-    navigate(paths[nextIndex]);
+    if (!name || !phone || !email) {
+      return;
+    } else {
+      const nextIndex = (currentPathIndex + 1) % paths.length;
+      setCurrentPathIndex(nextIndex);
+      navigate(paths[nextIndex]);
+    }
   };
 
   return (

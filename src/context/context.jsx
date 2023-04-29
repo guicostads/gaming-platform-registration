@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 export const PageContext = createContext();
@@ -9,7 +8,6 @@ export const PageContextProvider = ({ children }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [planPrice, setPlanPrice] = useState("");
-  const [activeInfo, setActiveInfo] = useState("");
   const [activePlan, setActivePlan] = useState(null);
   const [toggleValue, setToggleValue] = useState(false);
   const [isChecked1, setIsChecked1] = useState(false);
@@ -19,9 +17,7 @@ export const PageContextProvider = ({ children }) => {
   const page = useLocation();
   const path = page.pathname;
 
-  const handleActiveInfo = (e) => {
-    setActiveInfo(e.target.id);
-  };
+  
 
   //control the slected plan
   const handleActivePlan = (e) => {
@@ -54,7 +50,7 @@ export const PageContextProvider = ({ children }) => {
     }
   };
 
-  //control addon btn 1 state
+  //control addon btn 2 state
   const handleChange2 = (e) => {
     setIsChecked2(!isChecked2);
     if (!isChecked2) {
@@ -64,7 +60,7 @@ export const PageContextProvider = ({ children }) => {
     }
   };
 
-  //control addon btn 1 state
+  //control addon btn 3 state
   const handleChange3 = (e) => {
     setIsChecked3(!isChecked3);
     if (!isChecked3) {
@@ -89,8 +85,6 @@ export const PageContextProvider = ({ children }) => {
         handleActivePlan,
         setActivePlan,
         activePlan,
-        activeInfo,
-        handleActiveInfo,
         path,
         page,
         planPrice,
