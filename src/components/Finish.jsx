@@ -15,6 +15,7 @@ const Finish = () => {
     isChecked2,
     isChecked3,
     setActivePlan,
+    formState,
   } = useContext(PageContext);
 
   const marineBlue = {
@@ -39,8 +40,10 @@ const Finish = () => {
       <p>Double-check everything looks OK before confirming.</p>
       {!activePlan && (
         <div className="select-plan">
-          <p>Please, select your prefered plan and add-ons</p>
-          <Link to='/plans'>Go to Plan Selection</Link>
+          <div>
+            <p>Please, select your prefered plan and add-ons</p>
+            <Link to="/plans">Go to Plan Selection</Link>
+          </div>
         </div>
       )}
       {activePlan && (
@@ -85,6 +88,14 @@ const Finish = () => {
           <span style={purplishBlue}>
             ${totalPrice}/{toggleValue ? "yr" : "mo"}
           </span>
+        </div>
+      )}
+      {(formState.usernameError === true ||
+        formState.emailError === true ||
+        formState.phoneError === true) && (
+        <div>
+          <p>Please, fill all the personal info fields correctly. </p>
+          <Link to="/personalinfo">Go to Personal Info</Link>
         </div>
       )}
     </div>

@@ -6,7 +6,7 @@ import { PageContext } from "../context/context";
 import "./BottomNavigation.css";
 
 export const BottomNavigation = () => {
-  const { path, activePlan, name, phone, email } = useContext(PageContext);
+  const { path, activePlan, formState } = useContext(PageContext);
   const [currentPathIndex, setCurrentPathIndex] = useState(0);
   const paths = ["/personalinfo", "/plans", "/addons", "/finish"];
   const navigate = useNavigate();
@@ -20,13 +20,9 @@ export const BottomNavigation = () => {
 
   //next page on 'next step' btn
   const handleNextClick = () => {
-    if (!name || !phone || !email) {
-      return;
-    } else {
-      const nextIndex = (currentPathIndex + 1) % paths.length;
-      setCurrentPathIndex(nextIndex);
-      navigate(paths[nextIndex]);
-    }
+    const nextIndex = (currentPathIndex + 1) % paths.length;
+    setCurrentPathIndex(nextIndex);
+    navigate(paths[nextIndex]);
   };
 
   return (
@@ -52,13 +48,17 @@ export const BottomNavigation = () => {
           Next step
         </button>
       )}
-      {path === "/finish" && activePlan && (
-        <Link to="/thanks">
-          <button type="button" className="confirm-btn">
-            Confirm
-          </button>
-        </Link>
-      )}
+      {path === "/finish" &&
+        activePlan &&
+        formState.username &&
+        formState.email &&
+        formState.phone && (
+          <Link to="/thanks">
+            <button type="button" className="confirm-btn">
+              Confirm
+            </button>
+          </Link>
+        )}
     </footer>
   );
 };

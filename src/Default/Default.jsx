@@ -14,7 +14,7 @@ export const Default = () => {
     <PageContextProvider>
       <main className="layout">
         <TopNavigation />
-        {path === "/" && (
+        {(path === "/" || path === '') && (
           <div className="content">
             <PersonalInfo />
           </div>

@@ -1,12 +1,11 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export const PageContext = createContext();
 
 export const PageContextProvider = ({ children }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const page = useLocation();
+  const path = page.pathname;
   const [planPrice, setPlanPrice] = useState("");
   const [activePlan, setActivePlan] = useState(null);
   const [toggleValue, setToggleValue] = useState(false);
@@ -14,10 +13,72 @@ export const PageContextProvider = ({ children }) => {
   const [isChecked2, setIsChecked2] = useState(false);
   const [isChecked3, setIsChecked3] = useState(false);
   const [totalPrice, setTotalPrice] = useState(null);
-  const page = useLocation();
-  const path = page.pathname;
+  // form states and validation
+  const [formState, setFormState] = useState({
+    username: "",
+    usernameError: false,
+    email: "",
+    emailError: false,
+    phone: "",
+    phoneError: false,
+  });
 
-  
+  const handleFormChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+    validateField(name, value);
+  };
+
+  const validateField = (fieldName, value) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    const phoneRegex = /^\d{11}$/;
+
+    switch (fieldName) {
+      case "username":
+        if (value === "" || !nameRegex.test(value)) {
+          setFormState({
+            ...formState,
+            usernameError: true,
+          });
+        } else {
+          setFormState({
+            ...formState,
+            usernameError: false,
+          });
+        }
+        break;
+      case "email":
+        if (value === "" || !emailRegex.test(value)) {
+          setFormState({
+            ...formState,
+            emailError: true,
+          });
+        } else {
+          setFormState({
+            ...formState,
+            emailError: false,
+          });
+        }
+        break;
+      case "phone":
+        if (value === "" || !phoneRegex.test(value)) {
+          setFormState({
+            ...formState,
+            phoneError: true,
+          });
+        } else {
+          setFormState({
+            ...formState,
+            phoneError: false,
+          });
+        }
+        break;
+    }
+  };
 
   //control the slected plan
   const handleActivePlan = (e) => {
@@ -40,8 +101,8 @@ export const PageContextProvider = ({ children }) => {
     setIsChecked3(false);
   };
 
-  //control addon btn 1 state
-  const handleChange1 = (e) => {
+  //control addon btn 1 state and totalprice value
+  const handleSelected1 = (e) => {
     setIsChecked1(!isChecked1);
     if (!isChecked1) {
       setTotalPrice(Number(totalPrice) + Number(e.target.value));
@@ -50,8 +111,8 @@ export const PageContextProvider = ({ children }) => {
     }
   };
 
-  //control addon btn 2 state
-  const handleChange2 = (e) => {
+  //control addon btn 2 state and totalprice value
+  const handleSelected2 = (e) => {
     setIsChecked2(!isChecked2);
     if (!isChecked2) {
       setTotalPrice(Number(totalPrice) + Number(e.target.value));
@@ -60,8 +121,8 @@ export const PageContextProvider = ({ children }) => {
     }
   };
 
-  //control addon btn 3 state
-  const handleChange3 = (e) => {
+  //control addon btn 3 state and totalprice value
+  const handleSelected3 = (e) => {
     setIsChecked3(!isChecked3);
     if (!isChecked3) {
       setTotalPrice(Number(totalPrice) + Number(e.target.value));
@@ -70,8 +131,6 @@ export const PageContextProvider = ({ children }) => {
     }
   };
 
-  //-------
-
   return (
     <PageContext.Provider
       value={{
@@ -79,9 +138,9 @@ export const PageContextProvider = ({ children }) => {
         isChecked1,
         isChecked2,
         isChecked3,
-        handleChange1,
-        handleChange2,
-        handleChange3,
+        handleSelected1,
+        handleSelected2,
+        handleSelected3,
         handleActivePlan,
         setActivePlan,
         activePlan,
@@ -90,12 +149,9 @@ export const PageContextProvider = ({ children }) => {
         planPrice,
         toggleValue,
         handleToggle,
-        setEmail,
-        setPhone,
-        setName,
-        phone,
-        name,
-        email,
+        handleFormChange,
+        formState,
+        setFormState,
       }}
     >
       {children}

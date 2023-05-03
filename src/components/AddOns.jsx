@@ -9,9 +9,9 @@ const AddOns = () => {
     isChecked1,
     isChecked2,
     isChecked3,
-    handleChange1,
-    handleChange2,
-    handleChange3,
+    handleSelected1,
+    handleSelected2,
+    handleSelected3,
   } = useContext(PageContext);
 
   return (
@@ -24,7 +24,7 @@ const AddOns = () => {
         price={toggleValue ? "+10/yr" : "+1/mo"}
         value={toggleValue ? 10 : 1}
         isChecked={isChecked1}
-        onChange={handleChange1}
+        onChange={handleSelected1}
       />
       <AddOnButton
         id="Larger Storage"
@@ -32,7 +32,7 @@ const AddOns = () => {
         price={toggleValue ? "+20/yr" : "+2/mo"}
         value={toggleValue ? 20 : 2}
         isChecked={isChecked2}
-        onChange={handleChange2}
+        onChange={handleSelected2}
       />
       <AddOnButton
         id="Customizable Profile"
@@ -40,7 +40,7 @@ const AddOns = () => {
         price={toggleValue ? "+20/yr" : "+2/mo"}
         value={toggleValue ? 20 : 2}
         isChecked={isChecked3}
-        onChange={handleChange3}
+        onChange={handleSelected3}
       />
     </div>
   );

@@ -3,52 +3,53 @@ import { PageContext } from "../context/context";
 import "./PersonalInfo.css";
 
 const PersonalInfo = () => {
-  const {
-    setName,
-    setPhone,
-    setEmail,
-    phone,
-    email,
-    name,
-  } = useContext(PageContext);
+  const { setFormState, formState, handleFormChange } = useContext(PageContext);
 
   return (
     <div>
-      <form className="personal-info">
+      <div className="personal-info-header">
         <h1>Personal Info</h1>
         <p>Please provide your name, email adress and phone number.</p>
+      </div>
+      <form className="personal-info-form">
+        <label htmlFor="username">Name</label>
 
-        <label htmlFor="name">Name</label>
         <input
-          name="name"
-          id="name"
-          value={name}
-          type="text"
+          name="username"
+          id="username"
+          onBlur={handleFormChange}
+          onClick={() => setFormState({ ...formState, usernameError: false })}
+          className={formState.usernameError === false ? "" : "error"}
           placeholder="e.g Stephen King"
-          onChange={(e) => setName(e.target.value)}
-          className="not-active"
         ></input>
-
+        {formState.usernameError === true && (
+          <span>please fill the field correctly.</span>
+        )}
         <label htmlFor="email">Email Address</label>
         <input
           name="email"
           id="email"
-          value={email}
+          onBlur={handleFormChange}
+          onClick={() => setFormState({ ...formState, emailError: false })}
+          className={formState.emailError === false ? "" : "error"}
           placeholder="e.g stephenking@gmail.com"
-          onChange={(e) => setEmail(e.target.value)}
-          className="not-active"
         ></input>
-
+        {formState.emailError === true && (
+          <span>please fill the field correctly.</span>
+        )}
         <label htmlFor="phone">Phone Number</label>
         <input
           name="phone"
           type="tel"
           id="phone"
-          value={phone}
+          onBlur={handleFormChange}
+          onClick={() => setFormState({ ...formState, phoneError: false })}
+          className={formState.phoneError === false ? "" : "error"}
           placeholder="e.g (51) 99999-9999"
-          onChange={(e) => setPhone(e.target.value)}
-          className="not-active"
         ></input>
+        {formState.phoneError === true && (
+          <span>please fill the field correctly.</span>
+        )}
       </form>
     </div>
   );

@@ -1,4 +1,4 @@
-.personal-info {
+.personal-info-form {
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -6,83 +6,81 @@
   color: var(--cool-gray);
 }
 
-.personal-info p {
-  font-size: 1rem;
+.personal-info-form span {
+  color: var(--strawberry-red);
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+.personal-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-bottom: 1rem;
 }
 
-.personal-info input:focus {
+.personal-info-header p {
+  font-size: 1rem;
+  color: var(--cool-gray);
+}
+.personal-info-header h1 {
+  font-size: 1.3rem;
+  color: var(--marine-blue);
+}
+
+.personal-info-form input:focus {
   outline: 0;
 }
 
-.personal-info .active,
-.personal-info .not-active {
+.personal-info-form input:hover {
+  border: 1px solid var(--purplish-blue);
+}
+
+.personal-info-form input::placeholder {
+  color: var(--cool-gray);
+  font-weight: 400;
+}
+.personal-info-form input {
+  color: var(--marine-blue);
+  cursor: pointer;
   padding: 0.75rem 1rem;
   font-weight: 500;
   font-size: 0.95rem;
   border-radius: 0.3rem;
-}
-
-.personal-info .not-active {
   border: 1px solid var(--light-gray);
-  border-radius: 0.3rem;
-}
-
-.personal-info .active {
-  border: 1px solid var(--purplish-blue);
-}
-
-.personal-info input:hover {
-  border: 1px solid var(--purplish-blue);
-}
-
-.personal-info input::placeholder {
-  color: var(--cool-gray);
-  font-weight: 400;
-}
-.personal-info input {
-  color: var(--marine-blue);
-  cursor: pointer;
 }
 
 .persponal-info input:active {
   border: 1px solid var(--marine-blue);
 }
 
-.personal-info label {
+.personal-info-form label {
   color: var(--marine-blue);
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.personal-info h1 {
-  font-size: 1.3rem;
-  color: var(--marine-blue);
-}
 
-.error {
+
+.personal-info-form input.error {
   border: 1px solid red;
 }
 
 @media (min-width: 769px) {
-  .personal-info h1 {
+  .personal-info-form h1 {
     font-size: 1.4rem;
   }
 
-  .personal-info p {
+  .personal-info-form p {
     font-size: 1.1rem;
   }
 
-  .personal-info input::placeholder {
+  .personal-info-form input {
+    height: 3.5rem;
     font-size: 1.1rem;
   }
 
-  .personal-info .not-active {
-    height: 3.5rem;
-    font-size: 1rem;
-  }
-
-  .personal-info .active {
-    height: 3.5rem;
-    font-size: 1rem;
+  .personal-info-form input::placeholder {
+    font-size: 1.1rem;
   }
 }

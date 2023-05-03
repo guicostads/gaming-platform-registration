@@ -1,6 +1,7 @@
 .finish {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.75rem;
 }
 
@@ -15,14 +16,11 @@
   color: var(--cool-gray);
 }
 
-.finish .select-plan p {
-    font-size: 1.3rem;
-  }
-  .select-plan a {
-    text-decoration: underline 1px solid var(--marine-blue);
-    cursor: pointer;
-    color: var(--marine-blue);
-  }
+.select-plan a {
+  text-decoration: underline 1px solid var(--marine-blue);
+  cursor: pointer;
+  color: var(--marine-blue);
+}
 
 .finish-items {
   margin-top: 0.75rem;
@@ -53,11 +51,12 @@ a:active {
 }
 
 a:hover {
-    color: var(--purplish-blue);
-    text-decoration: underline 0.1rem solid var(--purplish-blue);
+  color: var(--purplish-blue);
+  text-decoration: underline 0.1rem solid var(--purplish-blue);
 }
 
-.select-plan {
+.finish .select-plan {
+  margin-top: 5rem;
   display: grid;
   place-items: center;
   gap: 0.5rem;
@@ -66,7 +65,10 @@ a:hover {
   padding: 1rem;
 }
 
-
+.finish .select-plan p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
 
 @media (min-width: 769px) {
   .finish h1 {

@@ -22,7 +22,17 @@
             <h3>Pro</h3>
             $15/mo
           </div>
-  </button>*/
+  </button> */
   //----------
   //let toggleClassCheck = active ? "active" : "not-active";
-}
+} 
+
+{ /* const {
+  setName,
+  setPhone,
+  setEmail,
+  phone,
+  email,
+  name,
+  errors
+} = useContext(PageContext);*/ }
