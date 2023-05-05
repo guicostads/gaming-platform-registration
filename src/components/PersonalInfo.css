@@ -10,7 +10,6 @@
   color: var(--strawberry-red);
   text-align: right;
   font-size: 0.9rem;
-  margin-top: -0.5rem;
 }
 .personal-info-header {
   display: flex;
@@ -64,6 +63,11 @@
 
 .personal-info-form input.error {
   border: 1px solid red;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 769px) {

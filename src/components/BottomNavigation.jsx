@@ -50,9 +50,9 @@ export const BottomNavigation = () => {
       )}
       {path === "/finish" &&
         activePlan &&
-        formState.username &&
-        formState.email &&
-        formState.phone && (
+        formState.usernameError === false &&
+        formState.emailError === false &&
+        formState.phoneError === false  && (
           <Link to="/thanks">
             <button type="button" className="confirm-btn">
               Confirm

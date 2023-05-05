@@ -55,19 +55,20 @@ a:hover {
   text-decoration: underline 0.1rem solid var(--purplish-blue);
 }
 
-.finish .select-plan {
-  margin-top: 5rem;
+.finish .error-msg {
   display: grid;
   place-items: center;
-  gap: 0.5rem;
-  color: var(--marine-blue);
-  text-align: center;
   padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  
 }
 
-.finish .select-plan p {
-  font-size: 1.3rem;
-  line-height: 2rem;
+.finish .error-msg p {
+  font-size: 1.1rem;
+  color: var(--strawberry-red);
 }
 
 @media (min-width: 769px) {
@@ -83,7 +84,7 @@ a:hover {
     font-size: 1.1rem;
   }
 
-  .select-plan {
-    margin-top: 9rem;
+  .finish .error-msg p {
+    font-size: 1.1rem;
   }
 }

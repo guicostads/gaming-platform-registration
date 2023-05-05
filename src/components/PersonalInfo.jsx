@@ -12,8 +12,12 @@ const PersonalInfo = () => {
         <p>Please provide your name, email adress and phone number.</p>
       </div>
       <form className="personal-info-form">
-        <label htmlFor="username">Name</label>
-
+        <div className="row">
+          <label htmlFor="username">Name</label>
+          {formState.usernameError && (
+            <span>please fill the field correctly.</span>
+          )}
+        </div>
         <input
           name="username"
           id="username"
@@ -22,10 +26,15 @@ const PersonalInfo = () => {
           className={formState.usernameError === false ? "" : "error"}
           placeholder="e.g Stephen King"
         ></input>
-        {formState.usernameError === true && (
-          <span>please fill the field correctly.</span>
-        )}
-        <label htmlFor="email">Email Address</label>
+        <div
+          className="row
+        "
+        >
+          <label htmlFor="email">Email Address</label>
+          {formState.emailError && (
+            <span>please fill the field correctly.</span>
+          )}
+        </div>
         <input
           name="email"
           id="email"
@@ -34,10 +43,12 @@ const PersonalInfo = () => {
           className={formState.emailError === false ? "" : "error"}
           placeholder="e.g stephenking@gmail.com"
         ></input>
-        {formState.emailError === true && (
-          <span>please fill the field correctly.</span>
-        )}
-        <label htmlFor="phone">Phone Number</label>
+        <div className="row">
+          <label htmlFor="phone">Phone Number</label>
+          {formState.phoneError && (
+            <span>please fill the field correctly.</span>
+          )}
+        </div>
         <input
           name="phone"
           type="tel"
@@ -45,11 +56,8 @@ const PersonalInfo = () => {
           onBlur={handleFormChange}
           onClick={() => setFormState({ ...formState, phoneError: false })}
           className={formState.phoneError === false ? "" : "error"}
-          placeholder="e.g (51) 99999-9999"
+          placeholder="e.g 51999999999"
         ></input>
-        {formState.phoneError === true && (
-          <span>please fill the field correctly.</span>
-        )}
       </form>
     </div>
   );

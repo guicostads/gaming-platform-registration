@@ -23,6 +23,8 @@ export const PageContextProvider = ({ children }) => {
     phoneError: false,
   });
 
+
+ //don't know if i'm supossed to put this code below here, but i'm learning in the proccess :D
   const handleFormChange = (event) => {
     const { name, value } = event.target;
     setFormState({
@@ -47,6 +49,7 @@ export const PageContextProvider = ({ children }) => {
         } else {
           setFormState({
             ...formState,
+            username: value,
             usernameError: false,
           });
         }
@@ -55,11 +58,13 @@ export const PageContextProvider = ({ children }) => {
         if (value === "" || !emailRegex.test(value)) {
           setFormState({
             ...formState,
+            email: value,
             emailError: true,
           });
         } else {
           setFormState({
             ...formState,
+            email: value,
             emailError: false,
           });
         }
@@ -68,11 +73,13 @@ export const PageContextProvider = ({ children }) => {
         if (value === "" || !phoneRegex.test(value)) {
           setFormState({
             ...formState,
+            phone: value,
             phoneError: true,
           });
         } else {
           setFormState({
             ...formState,
+            phone: value,
             phoneError: false,
           });
         }
