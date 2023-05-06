@@ -38,14 +38,7 @@ const Finish = () => {
     <div className="finish">
       <h1>Finishing up</h1>
       <p>Double-check everything looks OK before confirming.</p>
-      {!activePlan && (
-        <div className="error-msg">
-          <div>
-            <p>Please, select your prefered plan and add-ons</p>
-            <Link to="/plans">Go to Plan Selection</Link>
-          </div>
-        </div>
-      )}
+
       {activePlan && (
         <div className="finish-items">
           <div className="row">
@@ -90,14 +83,24 @@ const Finish = () => {
           </span>
         </div>
       )}
-      {(formState.usernameError ||
-        formState.emailError ||
-        formState.phoneError) && (
-        <div className="error-msg">
-          <p>Please, fill all the personal info fields correctly. </p>
-          <Link to="/personalinfo">Go to Personal Info</Link>
-        </div>
-      )}
+      <div className="error-msg">
+        {!activePlan && (
+          <div>
+            <div>
+              <p>Please, select your prefered plan and add-ons</p>
+              <Link to="/plans">Go to Plan Selection</Link>
+            </div>
+          </div>
+        )}
+        {(formState.usernameError ||
+          formState.emailError ||
+          formState.phoneError) && (
+          <div>
+            <p>Please, fill all the personal info fields correctly. </p>
+            <Link to="/personalinfo">Go to Personal Info</Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

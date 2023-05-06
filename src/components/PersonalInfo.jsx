@@ -21,6 +21,10 @@ const PersonalInfo = () => {
         <input
           name="username"
           id="username"
+          value={formState.username}
+          onChange={(e) =>
+            setFormState({ ...formState, username: e.target.value })
+          }
           onBlur={handleFormChange}
           onClick={() => setFormState({ ...formState, usernameError: false })}
           className={formState.usernameError === false ? "" : "error"}
@@ -38,6 +42,10 @@ const PersonalInfo = () => {
         <input
           name="email"
           id="email"
+          value={formState.email}
+          onChange={(e) =>
+            setFormState({ ...formState, email: e.target.value })
+          }
           onBlur={handleFormChange}
           onClick={() => setFormState({ ...formState, emailError: false })}
           className={formState.emailError === false ? "" : "error"}
@@ -53,6 +61,10 @@ const PersonalInfo = () => {
           name="phone"
           type="tel"
           id="phone"
+          value={formState.phone}
+          onChange={(e) =>
+            setFormState({ ...formState, phone: e.target.value })
+          }
           onBlur={handleFormChange}
           onClick={() => setFormState({ ...formState, phoneError: false })}
           className={formState.phoneError === false ? "" : "error"}
