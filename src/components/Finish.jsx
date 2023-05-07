@@ -1,9 +1,9 @@
 //Finish page info
-
 import { useContext } from "react";
 import { PageContext } from "../context/context";
 import { Link } from "react-router-dom";
 import "./Finish.css";
+import { WarningCircle } from "phosphor-react";
 
 const Finish = () => {
   const {
@@ -86,16 +86,19 @@ const Finish = () => {
       <div className="error-msg">
         {!activePlan && (
           <div>
-            <div>
-              <p>Please, select your prefered plan and add-ons</p>
-              <Link to="/plans">Go to Plan Selection</Link>
-            </div>
+            <WarningCircle />
+            <p>Please, select your prefered plan and add-ons</p>
+            <Link to="/plans">Go to Plan Selection</Link>
           </div>
         )}
         {(formState.usernameError ||
           formState.emailError ||
-          formState.phoneError) && (
+          formState.phoneError ||
+          !formState.username ||
+          !formState.email ||
+          !formState.phone) && (
           <div>
+            <WarningCircle />
             <p>Please, fill all the personal info fields correctly. </p>
             <Link to="/personalinfo">Go to Personal Info</Link>
           </div>

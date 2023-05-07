@@ -53,11 +53,14 @@ a:hover {
   display: flex;
   flex-direction: column;
   line-height: 1.5rem;
-  padding: 1rem;
+
   border-radius: 1rem;
-  width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+
+.finish .error-msg span {
+  width: 2rem;
 }
 
 .finish .error-msg p {
