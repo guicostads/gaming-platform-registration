@@ -16,12 +16,6 @@
   color: var(--cool-gray);
 }
 
-.select-plan a {
-  text-decoration: underline 1px solid var(--marine-blue);
-  cursor: pointer;
-  color: var(--marine-blue);
-}
-
 .finish-items {
   margin-top: 0.75rem;
   background-color: var(--magnolia);
@@ -58,7 +52,7 @@ a:hover {
 .finish .error-msg {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  line-height: 1.5rem;
   padding: 1rem;
   border-radius: 1rem;
   width: 100%;

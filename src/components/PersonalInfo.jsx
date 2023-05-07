@@ -15,7 +15,7 @@ const PersonalInfo = () => {
         <div className="row">
           <label htmlFor="username">Name</label>
           {formState.usernameError && (
-            <span>please fill the field correctly.</span>
+            <span>Please, fill this field correctly.</span>
           )}
         </div>
         <input
@@ -36,7 +36,7 @@ const PersonalInfo = () => {
         >
           <label htmlFor="email">Email Address</label>
           {formState.emailError && (
-            <span>please fill the field correctly.</span>
+            <span>Please, fill this field correctly.</span>
           )}
         </div>
         <input
@@ -54,7 +54,7 @@ const PersonalInfo = () => {
         <div className="row">
           <label htmlFor="phone">Phone Number</label>
           {formState.phoneError && (
-            <span>please fill the field correctly.</span>
+            <span>Please, fill this field correctly.</span>
           )}
         </div>
         <input

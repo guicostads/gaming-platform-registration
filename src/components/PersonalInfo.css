@@ -10,6 +10,7 @@
   color: var(--strawberry-red);
   text-align: right;
   font-size: 0.9rem;
+  gap: 0;
 }
 .personal-info-header {
   display: flex;

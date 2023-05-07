@@ -1,28 +1,41 @@
 //footer buttons for navigation
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { PageContext } from "../context/context";
 import "./BottomNavigation.css";
 
 export const BottomNavigation = () => {
   const { path, activePlan, formState } = useContext(PageContext);
-  const [currentPathIndex, setCurrentPathIndex] = useState(0);
-  const paths = ["/personalinfo", "/plans", "/addons", "/finish"];
   const navigate = useNavigate();
 
   //previous page on 'go back' btn
   const handlePrevClick = () => {
-    const prevIndex = (currentPathIndex - 1) % paths.length;
-    setCurrentPathIndex(prevIndex);
-    navigate(paths[prevIndex]);
+    switch (path) {
+      case "/finish":
+        navigate("/addons");
+        break;
+      case "/addons":
+        navigate("/plans");
+        break;
+      case "/plans":
+        navigate("/personalinfo");
+        break;
+    }
   };
 
   //next page on 'next step' btn
   const handleNextClick = () => {
-    const nextIndex = (currentPathIndex + 1) % paths.length;
-    setCurrentPathIndex(nextIndex);
-    navigate(paths[nextIndex]);
+    switch (path) {
+      case "/personalinfo":
+        navigate("/plans");
+        break;
+      case "/plans":
+        navigate("/addons");
+        break;
+      case "/addons":
+        navigate("/finish");
+    }
   };
 
   return (
@@ -52,7 +65,7 @@ export const BottomNavigation = () => {
         activePlan &&
         formState.usernameError === false &&
         formState.emailError === false &&
-        formState.phoneError === false  && (
+        formState.phoneError === false && (
           <Link to="/thanks">
             <button type="button" className="confirm-btn">
               Confirm
