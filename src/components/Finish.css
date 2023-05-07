@@ -53,10 +53,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   line-height: 1.5rem;
-
   border-radius: 1rem;
-  margin: 0 auto;
-  text-align: center;
+  gap: 1rem;
+ 
 }
 
 .finish .error-msg span {
@@ -65,7 +64,7 @@ a:hover {
 
 .finish .error-msg p {
   font-size: 1.1rem;
-  color: var(--strawberry-red);
+  color: var(--marine-blue);
 }
 
 @media (min-width: 769px) {
