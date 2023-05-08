@@ -1,15 +1,18 @@
 .personal-info-form {
   font-size: 1rem;
   display: flex;
+  gap: .2rem;
   flex-direction: column;
-  gap: 0.5rem;
   color: var(--cool-gray);
+}
+
+.personal-info-form input {
+  margin-bottom: .75rem;
 }
 
 .personal-info-form span {
   color: var(--strawberry-red);
   text-align: right;
-  font-size: 0.9rem;
   font-size: 0.75rem;
 }
 .personal-info-header {

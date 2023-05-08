@@ -8,12 +8,10 @@ export const AddOnButton = ({
   isChecked,
   onChange,
   value,
+  onClick
 }) => {
 
-  const priceStyle = {
-    fontWeight: '500',
-    fontSize: '1rem'
-  }
+  
   
   return (
     <button className={isChecked ? "checked" : "not-checked"}>

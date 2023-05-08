@@ -55,6 +55,8 @@ a:hover {
   line-height: 1.5rem;
   border-radius: 1rem;
   gap: 1rem;
+  margin: 0 auto;
+  text-align: center;
  
 }
 
@@ -78,6 +80,10 @@ a:hover {
 
   .finish-items {
     font-size: 1.1rem;
+  }
+
+  .finish .error-msg > div {
+    margin-top: 2rem;
   }
 
   .finish .error-msg p {

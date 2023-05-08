@@ -1,3 +1,4 @@
+//personal info form
 import { useContext } from "react";
 import { PageContext } from "../context/context";
 import "./PersonalInfo.css";
