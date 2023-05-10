@@ -27,6 +27,8 @@ export const BottomNavigation = () => {
   //next page on 'next step' btn
   const handleNextClick = () => {
     switch (path) {
+      case "/":
+        navigate("plans");
       case "/personalinfo":
         navigate("/plans");
         break;
