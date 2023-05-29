@@ -22,6 +22,5 @@ In this project I used the Context API for sharing data between components and r
 ![2023-05-08 (8)](https://user-images.githubusercontent.com/104312621/236834137-f1c71428-a109-4832-976b-8e53eb78723c.png)
 
 
-# Deploy
-https://chic-fox-962f44.netlify.app/
+
 
